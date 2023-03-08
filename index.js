@@ -92,7 +92,7 @@ function createStar() {
    starsContainer.appendChild(star);
  }
 
- for (var i = 0; i < 500; i++) {
+ for (var i = 0; i < 1500; i++) {
    createStar();
  }
 
@@ -100,13 +100,13 @@ function createStar() {
  var zoom = 0;
 
  function animateStars() {
-   zoom += 0.0005;
+   zoom += 0.0010;
    starsContainer.style.transform = "scale(" + zoom + ")";
 
-   if (zoom >= 2.1) {
+   if (zoom >= 4.1) {
      starsContainer.innerHTML = "";
      zoom = 1;
-     for (var i = 0; i < 500; i++) {
+     for (var i = 0; i < 1500; i++) {
        createStar();
      }
    }
